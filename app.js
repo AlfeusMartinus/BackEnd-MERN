@@ -17,7 +17,7 @@ const port = 3000
 // middleware
 app.use(express.json())
 app.use(helmet())
-app.unsubscribe(ExpressMongoSanitize())
+app.use(ExpressMongoSanitize())
 app.use(cookieParser())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('./public'))
